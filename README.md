@@ -1,15 +1,15 @@
 # Samsung blocks Activity launch when PIP mode is active
 
 ## Description
-This is a project demonstrates a bug that prevents Activities from launching when in PIP mode.  
+This project demonstrates a bug that prevents Activities from launching when in PIP mode.  
 The system believes the activity is in the background when it's not, resulting in the Activity being blocked until PIP is dismissed.
 
 Steps to reproduce reliably:
 1. Open video Activity
-2. Press system back to enter pip mode
+2. Press system back to enter PIP mode
 3. Background and foreground the app
 4. Attempt to open message activity 
-5. Activity only opens when pip is dismissed
+5. Activity only opens when PIP is dismissed
 
 https://github.com/user-attachments/assets/fb457de3-6e34-4a6d-809e-d6788f06515d
 
@@ -28,7 +28,7 @@ START u0 {xflg=0x4 cmp=com.slecornu.pipdemo/.MessageActivity} with LAUNCH_MULTIP
 ## StrictMode logging
 By upgrading my Samsung to Android 16 (Beta) and following [this documentation](https://developer.android.com/guide/components/activities/background-starts#strict-mode), I enabled more debug logging.
 
-Sometimes we can still launch Activities in pip mode, but only for a given period. This is due to the app being in a "grace period" state.
+Sometimes we can still launch Activities in PIP mode, but only for a given period. This is due to the app being in a "grace period" state.
 ```
 StrictMode policy violation: android.os.strictmode.BackgroundActivityLaunchViolation: Activity start is only allowed by grace period. This may stop working in the future. intent: Intent { xflg=0x4 cmp=com.slecornu.pipdemo/.MessageActivity } (Ask Gemini)
     at android.os.StrictMode.onBackgroundActivityLaunchAborted(StrictMode.java:2481)
@@ -49,7 +49,7 @@ StrictMode policy violation: android.os.strictmode.BackgroundActivityLaunchViola
 ```
 
 
-## Envionrments
+## Environments
 I've only been able to reproduce this bug on the following Samsung devices, but other devices may be affected:
 - S24 OneUI 8.0 Android 16 (Beta)
 - S24 OneUI 7 Android 15
@@ -60,5 +60,5 @@ I can't reproduce on my Pixel 6.
 ## Issue tracker
 [Android15 > PIP BAL(Background Activity Launch) issue](https://issuetracker.google.com/issues/444980490)
 
-## Relavent documentation
+## Relevant documentation
 https://developer.android.com/guide/components/activities/background-starts
