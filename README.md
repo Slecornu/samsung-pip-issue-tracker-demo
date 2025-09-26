@@ -11,6 +11,7 @@ Steps to reproduce reliably:
 4. Attempt to open message activity 
 5. Activity only opens when pip is dismissed
 
+https://github.com/user-attachments/assets/fb457de3-6e34-4a6d-809e-d6788f06515d
 
 ## ActivityTaskManager logging
 When inspecting `ActivityTaskManager` in logcat we can see the following messages. It seems the system thinks the app is in the background when it is not.
