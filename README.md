@@ -1,4 +1,4 @@
-# Samsung blocks Activity launch when PIP mode is active
+# Activity launch blocked when PIP mode is active
 
 ## Description
 This project demonstrates a bug that prevents Activities from launching when in PIP mode.  
@@ -49,11 +49,12 @@ StrictMode policy violation: android.os.strictmode.BackgroundActivityLaunchViola
 ```
 
 
-## Environments
-I've only been able to reproduce this bug on the following Samsung devices, but other devices may be affected:
+## Reproduced on the following environments
 - S24 OneUI 8.0 Android 16 (Beta)
 - S24 OneUI 7 Android 15
 - S22 OneUI 7 Android 15
+- Pixel 8 Pro Android 16
+- Pixel 9 Pro XL Android 16
 
 I can't reproduce on my Pixel 6.
 
