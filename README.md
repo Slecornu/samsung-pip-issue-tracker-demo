@@ -56,8 +56,6 @@ StrictMode policy violation: android.os.strictmode.BackgroundActivityLaunchViola
 - Pixel 8 Pro Android 16
 - Pixel 9 Pro XL Android 16
 
-I can't reproduce on my Pixel 6.
-
 ## Issue tracker
 [Android15 > PIP BAL(Background Activity Launch) issue](https://issuetracker.google.com/issues/444980490)
 
